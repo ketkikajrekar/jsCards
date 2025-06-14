@@ -1,81 +1,36 @@
- let s1=document.getElementById("sqr1");
- s1.addEventListener("mouseenter",function(){
-    let r=Math.floor(Math.random()*100);
-    s1.innerHTML=`<h1>${r}</h1>`;
- })
- s1.addEventListener("mouseleave",function(){
-    s1.innerHTML="<h1>1</h1>";
- })
+// var h=document.querySelector("h1");
+// h.innerHTML="GoodBye";//goodbye is getting printed in h1 font
+
+// var main=document.getElementById("main");
+// main.innerHTML="goodbye"; //small goodbye is printed
+
+// var main=document.getElementById("main");
+// main.innerHTML="<h1>Goodbye</h1>"; //goodbye is getting printed in h1 font
+
+// =>// var main=document.getElementById("main");
+// // var s="<h1>Goodbye</h1><h1>Goodbye</h1><h1>Goodbye</h1>";
+// var s="";
+// for(let i=1;i<=10;i++){
+//     s+="<h1>Goodbye</h1>";
+// }
+// main.innerHTML=s ;  //10 yimes goodbye is printed
+
+var main=document.getElementById("main");
+var s="";
+let arr=["https://i.pinimg.com/enabled_hi/474x/f7/30/c8/f730c879cfe65438987c19dd147d4512.jpg",
+    "https://i.pinimg.com/enabled_hi/474x/f8/4c/89/f84c89296660e59d4b2f4f432ce67903.jpg" ,
+    "https://i.pinimg.com/enabled_hi/474x/db/64/b9/db64b96cc7853963e5a9ab78221353c0.jpg",
+    "https://i.pinimg.com/enabled_hi/474x/38/61/6f/38616f4a0f45ba196a176620cd564e87.jpg",
+    "https://i.pinimg.com/474x/bd/06/40/bd064076507aba56e64bfb1d891957d0.jpg",
+    "https://i.pinimg.com/474x/88/53/1c/88531c7511bccb1f899a8b330a05fb43.jpg"];
+
+for(let i=1;i<=65;i++){
+    let r=Math.floor(Math.random()*arr.length);
+    s+=`<div class="card"><img src=${arr[r]}></div>`;
+}
+main.innerHTML=s ;
 
 
- s1.addEventListener("dblclick",function(){
-    let r1=Math.floor(Math.random()*256);
-    let r2=Math.floor(Math.random()*256);
-    let r3=Math.floor(Math.random()*256);
-    s1.style.backgroundColor=`rgb(${r1}, ${r2}, ${r3})`;
- })
- s1.addEventListener("mouseleave",function(){
-    s1.style.backgroundColor="white";
- })
-
- let s2=document.getElementById("sqr2");
- let clr="green";
- s2.addEventListener("mouseenter",function(){
-    if(clr=="green"){
-        s2.style.backgroundColor="green";
-        clr="red";
-    }
-    else{//clr=="red"
-        s2.style.backgroundColor="red";
-        clr="green";
-
-    }
- })
- s2.addEventListener("mouseleave",function(){
-     s2.style.backgroundColor="white";
- })
-
-
- //rgb(a,b,c) where a,b,c lies in 0 to 255
-let s3=document.getElementById("sqr3");
- s3.addEventListener("mouseenter",function(){
-    let r1=Math.floor(Math.random()*256);
-    let r2=Math.floor(Math.random()*256);
-    let r3=Math.floor(Math.random()*256);
-    s3.style.backgroundColor=`rgb(${r1}, ${r2}, ${r3})`;
- })
- s3.addEventListener("mouseleave",function(){
-    s3.style.backgroundColor="white";
- })
-
- let s4=document.getElementById("sqr4");
- s4.addEventListener("click",function(){
-    let r1=Math.floor(Math.random()*256);
-    let r2=Math.floor(Math.random()*256);
-    let r3=Math.floor(Math.random()*256);
-    s1.style.backgroundColor=`rgb(${r1}, 255, 255)`;
-    s2.style.backgroundColor=`rgb(255, ${r2}, 255)`;
-    s3.style.backgroundColor=`rgb(255, 255, ${r3})`;
-    
-    
-    // s3.style.backgroundColor=`rgb(${r1}, ${r2}, ${r3})`;
- })
- s4.addEventListener("mouseleave",function(){
-    s1.style.backgroundColor="white";
-    s2.style.backgroundColor="white";
-    s3.style.backgroundColor="white";
- })
-
- //cursor custom
- let main=document.getElementById("main");
- let crsr=document.getElementById("cursor");
- main.addEventListener("mousemove",function(dets){
-    // console.log(dets.x,dets.y)
-    crsr.style.left=dets.x+"px";
-    crsr.style.top=dets.y+"px";
-
- })
-
-
-
- 
+// `<div class="card">
+//         <img src="https://i.pinimg.com/enabled_hi/474x/f8/4c/89/f84c89296660e59d4b2f4f432ce67903.jpg" >
+//        </div>`
